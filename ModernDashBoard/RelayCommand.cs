@@ -20,13 +20,6 @@ namespace ModernDashBoard
             this.execute = execute;
             this.canExecute = canExecute;
         }
-
-        /// <summary>
-        /// CanExecuteChanged delegates the event subscription to the CommandManager.RequerySuggested event.
-        /// This ensures that the WPF commanding infrastructure asks all RelayCommand objects if they can execute whenever
-        /// it asks the built-in commands.
-        /// </summary>
-
         public event EventHandler CanExecuteChanged
         {
             add { CommandManager.RequerySuggested += value; }
